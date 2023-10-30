@@ -1,0 +1,670 @@
+:root {
+  /*--blue: #42386b; /* purple */
+  --blue: rgb(178, 34, 34);
+  --dark-gray: #4d4d5a;
+  --light-blue: #f5fffa;
+  --highlight: #d6d2c4;
+}
+
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: lightgray;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  /* Alt font Arial sans-serif */
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Roboto Serif", sans-serif;
+  font-size: 2.35rem;
+}
+
+h2 {
+  font-family: "Roboto Serif", sans-serif;
+  font-size: 1.85rem;
+  padding: 2px 5px 0 5px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 18px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+span {
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+#scroll-button {
+  display: none;
+  position: fixed;
+  bottom: 2.75em;
+  right: 2.75%;
+  z-index: 9999;
+  border: 2px solid var(--blue);
+  outline: none;
+  background-color: rgba(247, 243, 244, 0.65);
+  color: var(--blue);
+  cursor: pointer;
+  padding: 20px 25px 20px 25px;
+  border-radius: 50%;
+  font-size: 1em;
+}
+
+#scroll-button:hover {
+  background-color: var(--light-blue);
+}
+
+/* Structural Styles */
+header,
+#work,
+#skills,
+#about,
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: row wrap;
+}
+
+.content-wrapper {
+  width: 80%;
+  margin: 15px 0;
+  max-width: 1200px;
+}
+
+#work p,
+#about p {
+  text-align: left;
+}
+
+/* ---------- HEADER ---------- */
+header,
+footer {
+  background-color: var(--blue);
+  width: 100%;
+}
+
+header {
+  background: url("../IMG/header-background.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+
+/* Background photo by Clément Hélardot
+ https://unsplash.com/photos/95YRwf6CNw8 */
+
+header .content-wrapper {
+  background: rgba(28, 29, 108, 0.52);
+  border-radius: 10%;
+}
+
+/* Nav Open Button */
+.toggle {
+  background: #4682b4;
+  outline: 0;
+  margin-top: 15px;
+  padding: 10px 15px;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 2em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+  font-size: 45px;
+}
+
+.toggle:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  background: #fff;
+}
+
+.toggle i {
+  color: black;
+}
+
+/* Nav Position and Opening Class*/
+.full-screen-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s ease-in-out;
+  display: none;
+  z-index: 9999;
+}
+
+.open-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Backdrop position and animation */
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.96);
+  cursor: pointer;
+  animation: fadeIn 0.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* List item styling and animation */
+ul {
+  z-index: 9999;
+  position: relative;
+}
+
+ul li {
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: 0.25s ease-in-out animateList forwards;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes animateList {
+  from {
+    margin-top: -60px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+/* Item links styles and hover effects */
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 3em;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: 0.15s ease-in-out;
+}
+
+ul li a i {
+  color: var(--light-blue);
+}
+
+ul li a:hover {
+  color: var(--light-blue);
+}
+
+/* --- Alternate Title Text Scroll --- */
+.i-title {
+  height: 50px;
+  overflow: hidden;
+}
+
+.i-title-wrapper {
+  height: 100%;
+  animation: move 10s ease-in-out infinite alternate;
+}
+
+.i-title-wrapper .i-title-item {
+  color: #ffd700;
+}
+
+@keyframes move {
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  75% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+.i-title-item {
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------- INTRO TITLE -------- */
+
+#home i {
+  color: var(--light-blue);
+}
+
+/* Intro Photo */
+.i-photo {
+  margin: 30px;
+}
+
+.i-photo img {
+  border-radius: 50% !important;
+  object-fit: cover;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px rgba(250, 250, 250);
+}
+
+#profile-image {
+  width: 125px;
+}
+
+.home-title {
+  padding-bottom: 30px;
+}
+
+.header-icons {
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 0;
+}
+
+.header-icons i {
+  color: #4682b4;
+  font-size: 6em;
+}
+
+.header-icons i:hover {
+  color: var(--light-blue);
+}
+
+/* ----------------- HOMEPAGE ----------------- */
+/* About */
+#about {
+  /*background-color: var(--dark-gray);*/
+  background-color: rgb(25, 25, 112);
+}
+
+#about .content-wrapper {
+  width: 70%;
+}
+
+#about-photo {
+  border-radius: 15px;
+}
+
+#about img {
+  border-radius: 50% !important;
+  object-fit: cover;
+  border: 5px solid #fff;
+  overflow: hidden;
+  width: 245px;
+}
+
+.about-text span {
+  font-size: 1.1em;
+}
+
+/* Skills */
+#skills {
+  background-color: var(--blue);
+}
+
+.language-wrapper ul {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+#skills ul li {
+  padding: 1.25em;
+}
+
+#skills i {
+  color: var(--light-blue);
+}
+
+#skills i[title]:hover {
+  content: attr(title);
+  position: initial;
+}
+
+/* Projects */
+#work {
+  /*background-color: var(--dark-gray);*/
+  background-color: rgb(25, 25, 112);
+}
+
+#work h4 {
+  color: var(--light-blue);
+  margin-bottom: -2px;
+}
+
+#work span {
+  font-weight: 900;
+}
+
+.portfolio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+.portfolio-piece {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.portfolio-piece figure {
+  filter: drop-shadow(1px 2px 2px gray);
+}
+
+.portfolio-piece figure:hover {
+  transform: scale(1.02);
+}
+
+.portfolio-piece figure img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.project-description {
+  width: 90%;
+}
+
+/* ---------- FOOTER ---------- */
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+footer span {
+  color: var(--light-blue);
+  padding: 3px;
+}
+
+#connect i {
+  color: var(--light-blue);
+}
+#connect a i:hover {
+  color: var(--highlight);
+}
+
+.copyright {
+  color: var(--light-blue);
+}
+
+/* -------- Contact Form -------- */
+
+.contact-form {
+  width: 95%;
+  margin-bottom: 15px;
+}
+
+form {
+  text-align: center;
+}
+
+form input,
+form textarea {
+  border: 1px white solid;
+  border-radius: 10px;
+  display: block;
+  margin: 1em;
+  width: 95%;
+  height: 2em;
+}
+
+form #message {
+  height: 10em;
+}
+
+form ::placeholder {
+  color: var(--dark-gray);
+  padding-top: 2px;
+  padding-left: 5px;
+}
+
+#contact-form button {
+  background-color: var(--light-blue);
+  border-radius: 10px;
+  color: var(--blue);
+  cursor: pointer;
+  font-weight: 900;
+  border: none;
+  width: 50%;
+  margin: 0.25em;
+  padding: 15px 0 15px 0;
+  font-size: 1.25em;
+}
+
+#contact-form button:hover {
+  background-color: var(--highlight);
+}
+
+/* ----------------------------------  MEDIA QUERIES ----------------- */
+/* ---------- TABLET ---------- */
+
+@media only screen and (min-width: 640px) {
+  header .content-wrapper {
+    margin: 25px;
+    padding: 25px;
+    width: 70%;
+  }
+  .menu-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 5px 20px;
+  }
+
+  #profile-image {
+    width: 175px;
+    height: auto;
+    margin-top: -50px;
+  }
+
+  #about-photo {
+    margin-top: 10px;
+  }
+
+  #about img {
+    width: 275px;
+  }
+
+  #skills i {
+    font-size: 6em;
+  }
+
+  #skills ul li {
+    padding: 1em 3em 0 3em;
+  }
+
+  .portfolio-piece figure img {
+    width: 95%;
+  }
+
+  .project-description {
+    width: 85%;
+  }
+
+  footer .contact-info i {
+    padding-bottom: 15px;
+  }
+
+  #full-name,
+  #email-address {
+    display: inline;
+    width: 46.25%;
+    margin: 3px;
+  }
+}
+
+/* ------ Additional Breakpoint ------ */
+
+@media only screen and (min-width: 900px) {
+  .portfolio-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .portfolio-piece {
+    width: 48%;
+  }
+}
+
+/* ---------- DESKTOP ---------- */
+@media only screen and (min-width: 1024px) {
+  #scroll-button {
+    padding: 25px 30px 25px 30px;
+  }
+
+  header .content-wrapper {
+    margin: 45px;
+    width: 65%;
+  }
+
+  .home-title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .i-photo {
+    padding-left: 15px;
+  }
+
+  #profile-image {
+    width: 240px;
+  }
+
+  .home-name {
+    margin-right: 20px;
+  }
+
+  #about .half-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  #about figure {
+    width: 50%;
+    margin-right: 30px;
+  }
+
+  .about-text {
+    width: 50%;
+    margin-left: 15px;
+  }
+
+  #about img {
+    width: 350px;
+    height: auto;
+  }
+
+  .portfolio-piece figure img {
+    width: 100%;
+  }
+
+  .project-description {
+    width: 90%;
+  }
+
+  .contact-wrapper {
+    flex-direction: row;
+    width: 95%;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    width: 80%;
+  }
+
+  .contact-info a {
+    padding: 1.25em;
+  }
+
+  .contact-form {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  #full-name,
+  #email-address {
+    margin: 5px;
+  }
+}

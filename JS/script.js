@@ -1,25 +1,24 @@
-// scroll to top button
+// Scroll to Top Button
 const topButton = document.getElementById("scroll-button");
 
-window.onscroll = function () {
-  scrollFunction();
-};
+window.addEventListener("scroll", scrollFunction);
 
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  const shouldDisplayButton = window.pageYOffset > 50;
+
+  if (shouldDisplayButton) {
     topButton.style.display = "block";
   } else {
     topButton.style.display = "none";
   }
 }
 
-//When user clicks button, scroll to top of page
-function topFunction() {
-  document.body.scrollTop = 0; //For Safari
-  document.documentElement.scrollTop = 0; //For Chrome, Firefox, IE and Opera
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
 
-// nav menu
+// Nav Menu
 const toggle = document.querySelector(".toggle");
 const nav = document.querySelector(".full-screen-nav");
 const backdrop = document.querySelector(".backdrop");
@@ -31,15 +30,13 @@ function closeNav() {
   nav.classList.remove("open-nav");
 }
 
-// contact form - clear text upon submission
+// Contact Form - Clear Text upon Submission
 const btn = document.querySelector(".btn");
 const messageForm = document.getElementById("message");
 
-btn.addEventListener("click", setTimeout);
-
-setTimeout(resetForm, 1000);
-
-console.log(messageForm.value);
+btn.addEventListener("click", function () {
+  setTimeout(resetForm, 1000);
+});
 
 function resetForm() {
   messageForm.value = "";

@@ -1,5 +1,4 @@
 :root {
-  /*--blue: #42386b; /* purple */
   --blue: rgb(178, 34, 34);
   --dark-gray: #4d4d5a;
   --light-blue: #f5fffa;
@@ -134,9 +133,7 @@ header {
   background-size: cover;
 }
 
-/* Background photo by Clément Hélardot
- https://unsplash.com/photos/95YRwf6CNw8 */
-
+/* Background photo by Clément Hélardot https://unsplash.com/photos/95YRwf6CNw8 */
 header .content-wrapper {
   background: rgba(28, 29, 108, 0.52);
   border-radius: 10%;
@@ -184,6 +181,7 @@ header .content-wrapper {
   justify-content: center;
   align-items: center;
 }
+
 /* Backdrop position and animation */
 .backdrop {
   position: absolute;
@@ -335,7 +333,6 @@ ul li a:hover {
 /* ----------------- HOMEPAGE ----------------- */
 /* About */
 #about {
-  /*background-color: var(--dark-gray);*/
   background-color: rgb(25, 25, 112);
 }
 
@@ -385,7 +382,6 @@ ul li a:hover {
 
 /* Projects */
 #work {
-  /*background-color: var(--dark-gray);*/
   background-color: rgb(25, 25, 112);
 }
 
@@ -438,6 +434,7 @@ ul li a:hover {
   align-items: center;
   flex-direction: column;
 }
+
 footer .contact-info {
   display: flex;
   justify-content: space-between;
@@ -455,6 +452,7 @@ footer span {
 #connect i {
   color: var(--light-blue);
 }
+
 #connect a i:hover {
   color: var(--highlight);
 }

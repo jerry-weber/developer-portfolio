@@ -1,6 +1,8 @@
 // Scroll to Top Button
 const topButton = document.getElementById("scroll-button");
 
+topButton.addEventListener("click", scrollToTop);
+
 window.addEventListener("scroll", scrollFunction);
 
 function scrollFunction() {
@@ -17,6 +19,7 @@ function scrollToTop() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+
 
 // Nav Menu
 const toggle = document.querySelector(".toggle");

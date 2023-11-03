@@ -156,7 +156,7 @@ header .content-wrapper {
 /* Nav Open Button */
 .toggle {
   /*background: #4682b4;*/
-  background: #db4e4e;
+  background: #f3e5ab;
   outline: 0;
   margin-top: 15px;
   padding: 10px 15px;
@@ -274,7 +274,7 @@ ul li a:hover {
 }
 
 .i-title-wrapper .i-title-item {
-  color: #fa8072;
+  color: #f3e5ab;
 }
 
 @keyframes move {
@@ -337,7 +337,7 @@ ul li a:hover {
 }
 
 .header-icons i {
-  color: #db4e4e;
+  color: #f3e5ab;
   font-size: 6em;
 }
 
@@ -348,7 +348,8 @@ ul li a:hover {
 /* ----------------- HOMEPAGE ----------------- */
 /* About */
 #about {
-  background-color: rgb(25, 25, 112);
+  background-color: rgb(49, 44, 106);
+ 
 }
 
 #about .content-wrapper {
@@ -411,14 +412,17 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
+
 
 button:hover {
   background-color: #2980b9;
 }
 
 #work {
-  background-color: rgb(25, 25, 112);
+  background-color: rgb(49, 44, 106);
+ 
 }
 
 #work h4 {
@@ -442,7 +446,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 25px;
+  padding: 30px;
 }
 
 .portfolio-piece figure {
@@ -456,6 +460,7 @@ button:hover {
 .portfolio-piece figure img {
   border-radius: 5px;
   width: 100%;
+  border: 3px solid #ffffff;
 }
 
 .project-description {

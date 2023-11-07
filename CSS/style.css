@@ -504,6 +504,12 @@ footer span {
 
 /* -------- Contact Form -------- */
 
+.label-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
 .contact-form {
   width: 95%;
   margin-bottom: 15px;

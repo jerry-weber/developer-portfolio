@@ -27,9 +27,9 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="favicon_io/favicon-16x16.png" -->
+      href="favicon_io/favicon-16x16.png"
     />
-    <link rel="manifest" href="favicon_io/site.webmanifest" />
+    <link rel="manifest" href="favicon_io/site.webmanifest" /> -->
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/2b91a49c97.js"
@@ -141,12 +141,13 @@
               />
             </figure>
             <p class="about-text">
-              Hello, I'm <span>Jerry Weber</span>, and I'm not your
-              typical <span>Front-End Web Developer</span>. I see web development as an art,
-              a way to craft engaging and accessible websites that connect with
-              people. My coding journey began in 2017, but the seed was planted
-              back in 2008 when I first customized my own MySpace page. It was like
-              discovering a magic door to a world of endless possibilities.<br /><br />
+              Hello, I'm <span>Jerry Weber</span>, and I'm not your typical
+              <span>Front-End Web Developer</span>. I see web development as an
+              art, a way to craft engaging and accessible websites that connect
+              with people. My coding journey began in 2017, but the seed was
+              planted back in 2008 when I first customized my own MySpace page.
+              It was like discovering a magic door to a world of endless
+              possibilities.<br /><br />
 
               Coding, to me, is more than just lines of text; it's a gateway to
               creativity, innovation, and collaboration. With a background in
@@ -411,24 +412,27 @@
             <h4 class="contact-me">Send Jerry a Message</h4>
             <div id="contact-form">
               <form action="https://formspree.io/f/xwkdyabr" method="POST">
-                <input
-                  type="text"
-                  name="name"
-                  aria-label="write your full name"
-                  id="full-name"
-                  placeholder="First & Last Name"
-                  required
-                />
-
-                <input
-                  type="text"
-                  name="replyto"
-                  aria-label="your email address"
-                  id="email-address"
-                  placeholder="your_email@email.com"
-                  required
-                />
-
+                <div class="label-container">
+                  Name:
+                  <input
+                    type="text"
+                    name="name"
+                    aria-label="write your full name"
+                    id="full-name"
+                    placeholder="First & Last Name"
+                    required
+                  />
+                  Email:
+                  <input
+                    type="text"
+                    name="replyto"
+                    aria-label="your email address"
+                    id="email-address"
+                    placeholder="your_email@email.com"
+                    required
+                  />
+                </div>
+                Message:
                 <textarea
                   name="message"
                   aria-label="your message"
@@ -436,6 +440,7 @@
                   placeholder="Message"
                   required
                 ></textarea>
+
                 <button class="btn" type="submit">SEND</button>
               </form>
             </div>

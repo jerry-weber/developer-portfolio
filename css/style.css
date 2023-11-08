@@ -349,7 +349,6 @@ ul li a:hover {
 /* About */
 #about {
   background-color: rgb(49, 44, 106);
- 
 }
 
 #about .content-wrapper {
@@ -405,16 +404,13 @@ ul li a:hover {
 button {
   background-color: #3498db;
   color: #fff;
-  margin: 15px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  
 }
-
 
 button:hover {
   background-color: #2980b9;
@@ -422,7 +418,6 @@ button:hover {
 
 #work {
   background-color: rgb(49, 44, 106);
- 
 }
 
 #work h4 {
@@ -463,8 +458,28 @@ button:hover {
   border: 3px solid #ffffff;
 }
 
+.button-link {
+  margin-top: 7px;
+  display: inline-block;
+  width: 325px;
+  padding: 10px 20px;
+  background-color: #0074d9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button-link:hover {
+  background-color: #0056b3;
+}
+
 .project-description {
   width: 90%;
+}
+
+.skills-text {
+  color: #f3e5ab; /* Change the color to your desired color */
 }
 
 /* ---------- FOOTER ---------- */
@@ -504,10 +519,13 @@ footer span {
 
 /* -------- Contact Form -------- */
 
-.label-container {
+.form-container {
   display: flex;
   flex-direction: row;
-  position: relative;
+}
+
+label {
+  font-weight: bold;
 }
 
 .contact-form {

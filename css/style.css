@@ -645,6 +645,22 @@ form ::placeholder {
   }
 }
 
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .language-wrapper ul,
+  .tool-wrapper {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center-align items */
+  }
+  .language-wrapper ul li,
+  .tool-wrapper h5 {
+    text-align: center; /* Center-align text */
+  }
+  .language-wrapper ul li {
+    margin-bottom: 10px; /* Add some spacing between items */
+  }
+}
+
 /* ---------- DESKTOP ---------- */
 @media only screen and (min-width: 1024px) {
   #scroll-button {

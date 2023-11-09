@@ -519,22 +519,37 @@ footer span {
 
 /* -------- Contact Form -------- */
 
-.form-container {
+#fs-frm-inputs {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #fff;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 label {
   font-weight: bold;
 }
 
-.contact-form {
-  width: 95%;
-  margin-bottom: 15px;
+#fs-frm-inputs label {
+  margin-bottom: 5px;
 }
 
-form {
-  text-align: center;
+#fs-frm-inputs #full-name,
+#fs-frm-inputs #email-address {
+  width: 80%; /* Adjust the width to your preference */
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#message {
+  width: 80%; /* Adjust the width to your preference */
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 form input,
@@ -564,7 +579,7 @@ form ::placeholder {
   cursor: pointer;
   font-weight: 900;
   border: none;
-  width: 50%;
+  width: 80%;
   margin: 0.25em;
   padding: 15px 0 15px 0;
   font-size: 1.25em;
